@@ -10,17 +10,17 @@
 </head>
 
 <body>
-    <h1>Gabriela's Portfolio</h1>
+    <!-- <h1>Gabriela's Portfolio</h1>
 
     <div class="gallery">
         <a target="_blank" href="images/gatorade-6.png">
-            <img src="/images/Gatorade-6.png" alt="Gatorade-6" width="600px" height="400">
+            <img src="/images/gatorade-6.png" alt="Gatorade-6" width="600px" height="400">
         </a>
     </div>
 
     <div class="gallery">
         <a target="_blank" href="images/gatorade-1.png">
-            <img src="/images/Gatorade-1.png" alt="Gatorade-1" width="600px" height="400">
+            <img src="/images/gatorade-1.png" alt="Gatorade-1" width="600px" height="400">
         </a>
     </div>
 
@@ -37,23 +37,23 @@
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="images/evernote-1.png">
-            <img src="/images/Evernote-1.png" alt="Evernote-1" width="600px" height="400">
+        <a target="_blank" href="images/evernote-1.jpg">
+            <img src="/images/evernote-1.jpg" alt="Evernote-1" width="600px" height="400">
         </a>
     </div>
     <div class="gallery">
         <a target="_blank" href="images/gatorade-2.png">
-            <img src="/images/Gatorade-2.png" alt="Gatorade-2" width="600px" height="400">
+            <img src="/images/gatorade-2.png" alt="Gatorade-2" width="600px" height="400">
         </a>
     </div>
     <div class="gallery">
         <a target="_blank" href="images/gatorade-3.png">
-            <img src="/images/Gatorade-3.png" alt="Gatorade-3" width="600px" height="400">
+            <img src="/images/gatorade-3.png" alt="Gatorade-3" width="600px" height="400">
         </a>
     </div>
     <div class="gallery">
-        <a target="_blank" href="images/ramset-1.png">
-            <img src="/images/Ramset-1.png" alt="Ramset-1" width="600px" height="400">
+        <a target="_blank" href="images/ramset-1.jpg">
+            <img src="/images/ramset-1.jpg" alt="Ramset-1" width="600px" height="400">
         </a>
     </div>
     <div class="gallery">
@@ -70,7 +70,92 @@
         <a target="_blank" href="images/hf-2.png">
             <img src="/images/hf-2.png" alt="hf-2" width="600px" height="400">
         </a>
+    </div> -->
+    <h1>Gabriela's portfolio</h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="images/gatorade-2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gatorade-3.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gatorade-4.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gatorade-5.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gatorade-6.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/rx-1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/hf-2.png" style="height:600px;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/img-1.jpg" style="height:600px">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/ramset-1.png" style="height:600px">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/gatorade-1.png" style="height:600px;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/evernote-1.png" style="height:600px">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
     </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 
 </body>
 
